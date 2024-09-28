@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Header from '../Header/Header';
+import Header from '../components/Header/Header';
 import { useTelegram } from '../hooks/useTelegram';
 import './App.css';
 
