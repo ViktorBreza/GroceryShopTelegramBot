@@ -16,7 +16,7 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const { tg, queryId } = useTelegram();
     const [selectedCategory, setSelectedCategory] = useState(null);
-
+    
     const categories = Object.keys(productsData); // Get categories
 
     const onSendData = useCallback(() => {
@@ -67,15 +67,13 @@ const ProductList = () => {
         setSelectedCategory(category);
     };
 
-    // Function to handle exit button click
     const handleExitClick = () => {
         tg.onClose(); // Calls the onClose method from useTelegram
     };
 
     return (
         <div className={'product-list'}>
-            {/* Header should always be rendered */}
-            <Header showGreeting={selectedCategory === null} /> {/* Show greeting only on category selection */}
+            <Header showGreeting={selectedCategory === null} /> {/* Only one Header instance */}
 
             {selectedCategory === null ? (
                 <>
@@ -101,9 +99,9 @@ const ProductList = () => {
                     <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
                 </div>
             )}
-            {/* <button className="logout-button" onClick={handleExitClick}>
+            <button className="logout-button" onClick={handleExitClick}>
                 Вийти з магазину
-            </button> */}
+            </button>
         </div>
     );
 };
