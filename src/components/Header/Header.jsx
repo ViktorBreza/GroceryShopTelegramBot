@@ -8,9 +8,11 @@ const Header = () => {
   
     return (
         <div className={'header'}>
-            <span className={'welcome-text'}>
-                Привіт, {user?.username}! Ласкаво просимо до магазину Авокадо, приємних покупок!
-            </span>
+            <div className={'welcome-container'}>
+                <span className={'welcome-text'}>
+                    Привіт, {user?.username}! Ласкаво просимо до магазину Авокадо, приємних покупок!
+                </span>
+            </div>
             <Button className="logout-button" onClick={onClose}>Вийти з магазину</Button>
         </div>
     );

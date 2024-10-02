@@ -1,23 +1,31 @@
 .header {
     width: 100%;
-    height: 70px; /* Зробимо хедер трохи вищим */
+    height: 80px; /* Трохи більше місця для тексту */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Додамо вирівнювання між текстом і кнопкою */
+    justify-content: space-between;
     padding: 0 20px;
-    background-color: #f0f8ff; /* Ніжний фон для хедера */
-    border-bottom: 1px solid #ddd;
+    background-color: #2C3E50; /* Темно-синій фон для сучасного вигляду */
+    border-bottom: 2px solid #2980B9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь для відділення хедера */
+}
+
+.welcome-container {
+    flex: 1; /* Текст займає всю доступну ширину */
+    overflow: hidden; /* Приховує вихід тексту за межі контейнера */
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Текст буде скорочуватися з "..." */
 }
 
 .welcome-text {
-    font-size: 18px;
-    color: #333;
+    font-size: 16px; /* Зменшений розмір шрифту для більшої адаптивності */
+    color: #ECF0F1; /* Світлий текст для темного фону */
 }
 
 .logout-button {
-    background-color: #ffcc80; /* Ніжно-оранжевий колір кнопки */
+    background-color: #E74C3C; /* Червоний колір кнопки для контрасту */
     color: #fff;
-    padding: 10px 20px; /* Збільшуємо розмір кнопки */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -26,9 +34,18 @@
 }
 
 .logout-button:hover {
-    background-color: #ffa726; /* Трохи яскравіший колір при наведенні */
+    background-color: #C0392B; /* Темніший відтінок червоного при наведенні */
 }
 
-.username {
-    margin-left: auto;
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Вертикальний хедер на малих екранах */
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .logout-button {
+        margin-top: 10px;
+        width: 100%;
+    }
 }
