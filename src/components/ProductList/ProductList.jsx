@@ -99,9 +99,9 @@ const ProductList = () => {
                     <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
                 </div>
             )}
-            <button className="logout-button" onClick={handleExitClick}>
+            {/* <button className="logout-button" onClick={handleExitClick}>
                 Вийти з магазину
-            </button>
+            </button> */}
         </div>
     );
 };

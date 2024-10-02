@@ -14,14 +14,16 @@ const Header = ({ showGreeting }) => {
 
     return (
         <header className="header">
-            {showGreeting && (
-                <span className="welcome-text">
-                    Привіт, {user?.username}! Ласкаво просимо до магазину Авокадо, приємних покупок!
-                </span>
-            )}
             <button className="logout-button" onClick={handleExitClick}>
                 Вийти з магазину
             </button>
+            {showGreeting && (
+                <div className="welcome-text-container">
+                    <span className="welcome-text">
+                        Привіт, {user?.username}! Ласкаво просимо до магазину Авокадо, приємних покупок!
+                    </span>
+                </div>
+            )}
         </header>
     );
 };
