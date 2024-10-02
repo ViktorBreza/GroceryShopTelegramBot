@@ -95,7 +95,6 @@ const ProductList = () => {
                     <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
                 </div>
             )}
-            {/* Кнопка "Вийти з магазину" завжди відображається праворуч */}
             <button style={{ position: 'absolute', top: 10, right: 10 }}>Вийти з магазину</button>
         </div>
     );
