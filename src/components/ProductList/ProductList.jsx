@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import productsData from '../../data/products';
 import { useTelegram } from "../../hooks/useTelegram";
 import CategorySelector from "../CategorySelector/CategorySelector";
+import Header from '../Header/Header'; // Додаємо імпорт хедера
 import ProductItem from "../ProductItem/ProductItem";
 import './ProductList.css';
 
@@ -69,10 +70,14 @@ const ProductList = () => {
     return (
         <div className={'product-list'}>
             {selectedCategory === null ? (
-                <CategorySelector
-                    categories={categories}
-                    onSelectCategory={handleCategorySelect}
-                />
+                <>
+                    <Header /> {/* Відображаємо хедер тільки на сторінці вибору категорій */}
+                    <h2>Виберіть категорію</h2>
+                    <CategorySelector
+                        categories={categories}
+                        onSelectCategory={handleCategorySelect}
+                    />
+                </>
             ) : (
                 <div>
                     <h2>{selectedCategory}</h2>
@@ -89,6 +94,7 @@ const ProductList = () => {
                     <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
                 </div>
             )}
+            <button style={{ position: 'absolute', top: 10, right: 10 }}>Вийти з магазину</button> {/* Кнопка "Вийти з магазину" завжди відображається праворуч */}
         </div>
     );
 };
