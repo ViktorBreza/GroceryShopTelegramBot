@@ -1,14 +1,16 @@
+// src/components/Header/Header.js
+
 import React from 'react';
 import { useTelegram } from '../../hooks/useTelegram';
 import Button from '../Button/Button';
 import './Header.css';
 
-const Header = ({ showGreeting }) => {  // Додаємо новий пропс showGreeting
+const Header = ({ showGreeting }) => {
     const { user, onClose } = useTelegram();
-  
+
     return (
         <header className="header">
-            {showGreeting && (  // Привітання показується лише на сторінці вибору категорії
+            {showGreeting && (
                 <span className="welcome-text">
                     Привіт, {user?.username}! Ласкаво просимо до магазину Авокадо, приємних покупок!
                 </span>

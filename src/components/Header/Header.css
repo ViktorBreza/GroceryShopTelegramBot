@@ -1,46 +1,27 @@
+/* src/components/Header/Header.css */
+
 .header {
-    width: 100%;
-    padding: 10px;
-    background-color: #34495e; /* Темний фон хедера */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    flex-wrap: wrap; /* Додаємо перенесення */
+    justify-content: space-between; /* Вирівнювання кнопок по краях */
+    align-items: center; /* Вертикальне вирівнювання */
+    padding: 10px; /* Внутрішні відступи */
+    background-color: #f8f9fa; /* Світлий фон для хедера */
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap; /* Для адаптивного вигляду */
-}
-
-/* Оновлення класу для тексту */
 .welcome-text {
-    font-size: 1.2em; /* Збільшуємо розмір шрифту */
-    color: #ecf0f1;
-    max-width: 100%; /* Розширюємо ширину тексту */
-    text-align: center; /* Центруємо текст */
-    padding: 0 10px; /* Додаємо горизонтальні відступи */
-    white-space: normal; /* Дозволяємо перенос тексту */
-    overflow: hidden;
+    font-size: 16px; /* Розмір шрифту для привітання */
+    color: #333; /* Колір тексту привітання */
 }
 
 .logout-button {
-    background-color: #e74c3c;
-    color: #ffffff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px; /* Трохи зменшений розмір тексту */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 15px; /* Внутрішні відступи для кнопки виходу */
+    background-color: #d9534f; /* Червоний фон для кнопки виходу */
+    color: white; /* Білий текст на кнопці виходу */
+    border: none; /* Без межі */
+    border-radius: 5px; /* Закруглені краї */
+    cursor: pointer; /* Курсор на кнопці */
 }
 
 .logout-button:hover {
-    background-color: #c0392b;
+    background-color: #c9302c; /* Темніший червоний при наведенні */
 }

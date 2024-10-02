@@ -1,39 +1,32 @@
+/* src/components/CategorySelector/CategorySelector.css */
+
 .category-selector {
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* Кнопки у стовпчик */
+    padding: 10px; /* Внутрішні відступи */
 }
 
 h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Відступ між заголовком і кнопками */
 }
 
 .categories-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column; /* Вирівнюємо кнопки вертикально */
 }
 
 .category-button {
-    padding: 15px;
-    font-size: 30px; /* Зробіть текст більшим */
-    margin: 15px 0; /* Відстань між кнопками */
-    width: 100%; /* Зробіть кнопку на всю ширину */
+    width: 100%; /* Кнопка на всю ширину */
+    padding: 15px; /* Внутрішні відступи для зручності натискання */
+    margin-bottom: 10px; /* Відстань між кнопками */
+    background-color: #4CAF50; /* Колір фону кнопки */
+    color: white; /* Колір тексту */
+    border: none; /* Без межі */
+    border-radius: 5px; /* Закруглені краї */
+    font-size: 16px; /* Розмір шрифту */
+    cursor: pointer; /* Курсор на кнопках */
 }
-
-.logout-button {
-    position: absolute; /* Розмістіть кнопку в правому верхньому куті */
-    right: 10px;
-    top: 10px;
-    padding: 10px;
-    font-size: 30px;
-}
-
 
 .category-button:hover {
-    background-color: #45a049;
-}
-
-.category-button:active {
-    background-color: #3e8e41;
+    background-color: #45a049; /* Зміна кольору при наведенні */
 }
