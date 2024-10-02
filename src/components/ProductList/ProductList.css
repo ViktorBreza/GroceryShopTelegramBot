@@ -8,3 +8,15 @@
     margin-right: 10px;
     margin-bottom: 10px;
 }
+
+.logout-button {
+    padding: 10px 15px; /* Internal padding for the logout button */
+    background-color: #d9534f; /* Red background for the logout button */
+    color: white; /* White text on the logout button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor change on button */
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+}

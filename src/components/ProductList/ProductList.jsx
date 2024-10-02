@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import productsData from '../../data/products';
 import { useTelegram } from "../../hooks/useTelegram";
 import CategorySelector from "../CategorySelector/CategorySelector";
-import Header from '../Header/Header'; // Імпорт хедера
+import Header from '../Header/Header'; // Import the Header
 import ProductItem from "../ProductItem/ProductItem";
 import './ProductList.css';
 
@@ -17,7 +17,7 @@ const ProductList = () => {
     const { tg, queryId } = useTelegram();
     const [selectedCategory, setSelectedCategory] = useState(null);
 
-    const categories = Object.keys(productsData); // Отримуємо категорії
+    const categories = Object.keys(productsData); // Get categories
 
     const onSendData = useCallback(() => {
         const data = {
@@ -67,10 +67,16 @@ const ProductList = () => {
         setSelectedCategory(category);
     };
 
+    // Function to handle exit button click
+    const handleExitClick = () => {
+        tg.onClose(); // Calls the onClose method from useTelegram
+    };
+
     return (
         <div className={'product-list'}>
-            {/* Хедер відображається тільки на сторінці вибору категорій */}
-            {selectedCategory === null && <Header />}
+            {/* Header should always be rendered */}
+            <Header showGreeting={selectedCategory === null} /> {/* Show greeting only on category selection */}
+
             {selectedCategory === null ? (
                 <>
                     <h2>Виберіть категорію</h2>
@@ -95,7 +101,9 @@ const ProductList = () => {
                     <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
                 </div>
             )}
-            <button style={{ position: 'absolute', top: 10, right: 10 }}>Вийти з магазину</button>
+            <button className="logout-button" onClick={handleExitClick}>
+                Вийти з магазину
+            </button>
         </div>
     );
 };
