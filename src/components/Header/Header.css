@@ -4,7 +4,7 @@
     background-color: #34495e; /* Темний фон хедера */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Центруємо контент */
     align-items: center;
     position: relative;
     z-index: 1;
@@ -19,10 +19,13 @@
     flex-wrap: wrap; /* Для адаптивного вигляду */
 }
 
+/* Оновлення класу для тексту */
 .welcome-text {
-    font-size: 1em; /* Зменшуємо розмір шрифту */
+    font-size: 1.2em; /* Збільшуємо розмір шрифту */
     color: #ecf0f1;
-    max-width: 70%;
+    max-width: 100%; /* Розширюємо ширину тексту */
+    text-align: center; /* Центруємо текст */
+    padding: 0 10px; /* Додаємо горизонтальні відступи */
     white-space: normal; /* Дозволяємо перенос тексту */
     overflow: hidden;
 }
