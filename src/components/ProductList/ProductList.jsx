@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import productsData from '../../data/products';
 import { useTelegram } from "../../hooks/useTelegram";
 import CategorySelector from "../CategorySelector/CategorySelector";
-import Header from "../Header/Header"; // Імпортуємо Header
 import ProductItem from "../ProductItem/ProductItem";
 import './ProductList.css';
 
@@ -69,7 +68,6 @@ const ProductList = () => {
 
     return (
         <div className={'product-list'}>
-            <Header showGreeting={selectedCategory === null} /> {/* Привітання показується лише на сторінці вибору категорії */}
             {selectedCategory === null ? (
                 <CategorySelector
                     categories={categories}
