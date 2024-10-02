@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import productsData from '../../data/products';
 import { useTelegram } from "../../hooks/useTelegram";
 import CategorySelector from "../CategorySelector/CategorySelector";
-import Header from '../Header/Header'; // Додаємо імпорт хедера
+import Header from '../Header/Header'; // Імпорт хедера
 import ProductItem from "../ProductItem/ProductItem";
 import './ProductList.css';
 
@@ -58,7 +58,7 @@ const ProductList = () => {
         } else {
             tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Купить ${getTotalPrice(newItems)}`,
+                text: `Купити ${getTotalPrice(newItems)}`,
             });
         }
     };
@@ -69,9 +69,10 @@ const ProductList = () => {
 
     return (
         <div className={'product-list'}>
+            {/* Хедер відображається тільки на сторінці вибору категорій */}
+            {selectedCategory === null && <Header />}
             {selectedCategory === null ? (
                 <>
-                    <Header /> {/* Відображаємо хедер тільки на сторінці вибору категорій */}
                     <h2>Виберіть категорію</h2>
                     <CategorySelector
                         categories={categories}
@@ -94,7 +95,8 @@ const ProductList = () => {
                     <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
                 </div>
             )}
-            <button style={{ position: 'absolute', top: 10, right: 10 }}>Вийти з магазину</button> {/* Кнопка "Вийти з магазину" завжди відображається праворуч */}
+            {/* Кнопка "Вийти з магазину" завжди відображається праворуч */}
+            <button style={{ position: 'absolute', top: 10, right: 10 }}>Вийти з магазину</button>
         </div>
     );
 };
