@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     background-color: #34495e; /* Темний фон хедера */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -8,6 +8,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
+    flex-wrap: wrap; /* Додаємо перенесення */
 }
 
 .header-content {
@@ -15,24 +16,24 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap; /* Для адаптивного вигляду */
 }
 
 .welcome-text {
-    font-size: 1.2em;
-    color: #ecf0f1; /* Світлий текст */
+    font-size: 1em; /* Зменшуємо розмір шрифту */
+    color: #ecf0f1;
     max-width: 70%;
-    white-space: nowrap;
+    white-space: normal; /* Дозволяємо перенос тексту */
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .logout-button {
     background-color: #e74c3c;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px; /* Трохи зменшений розмір тексту */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }

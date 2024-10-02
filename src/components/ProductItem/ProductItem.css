@@ -2,44 +2,46 @@
     display: flex;
     flex-direction: column;
     border: 1px solid var(--tg-theme-button-color);
-    padding: 15px;
-    background-color: #2c3e50; /* Темний фон для карток продуктів */
-    color: #ecf0f1; /* Світлий текст для кращого контрасту */
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     border-radius: 8px;
     transition: transform 0.2s ease;
+    width: 150px; /* Зменшений розмір картки */
+    margin: 10px; /* Відстань між картками */
 }
 
 .product:hover {
-    transform: scale(1.05); /* Анімація при наведенні */
+    transform: scale(1.05);
 }
 
 .img {
     width: 100%;
     background: lightgray;
-    height: 150px; /* Збільшений розмір зображення */
+    height: 80px; /* Зменшений розмір зображення */
     margin: 0 auto;
     background: var(--tg-theme-button-color);
     border-radius: 5px;
 }
 
 .description {
-    font-size: 1em;
-    margin-top: 10px;
-    color: #bdc3c7; /* Світло-сірий колір для тексту опису */
+    font-size: 0.75em; /* Трохи менший текст */
+    margin-top: 5px;
+    color: #bdc3c7;
 }
 
 .add-btn {
     width: 100%;
-    margin-top: 10px;
-    background-color: #e74c3c; /* Червона кнопка */
+    margin-top: 8px;
+    background-color: #e74c3c;
     color: white;
-    padding: 10px;
+    padding: 8px; /* Менший відступ кнопки */
     border-radius: 5px;
     border: none;
-    font-size: 16px;
+    font-size: 14px; /* Зменшений розмір тексту кнопки */
     transition: background-color 0.3s ease;
 }
 
 .add-btn:hover {
-    background-color: #c0392b; /* Темніший відтінок при наведенні */
+    background-color: #c0392b;
 }
