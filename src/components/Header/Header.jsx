@@ -7,6 +7,11 @@ import './Header.css';
 const Header = ({ showGreeting }) => {
     const { user, onClose } = useTelegram();
 
+    // Function to handle exit button click
+    const handleExitClick = () => {
+        onClose(); // Calls the onClose method from useTelegram
+    };
+
     return (
         <header className="header">
             {showGreeting && (
@@ -14,7 +19,9 @@ const Header = ({ showGreeting }) => {
                     Привіт, {user?.username}! Ласкаво просимо до магазину Авокадо, приємних покупок!
                 </span>
             )}
-        
+            <button className="logout-button" onClick={handleExitClick}>
+                Вийти з магазину
+            </button>
         </header>
     );
 };
