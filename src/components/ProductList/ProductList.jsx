@@ -67,10 +67,6 @@ const ProductList = () => {
         setSelectedCategory(category);
     };
 
-    const handleExitClick = () => {
-        tg.onClose(); // Calls the onClose method from useTelegram
-    };
-
     return (
         <div className={'product-list'}>
             <Header showGreeting={selectedCategory === null} /> {/* Only one Header instance */}
@@ -99,9 +95,7 @@ const ProductList = () => {
                     <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
                 </div>
             )}
-            {/* <button className="logout-button" onClick={handleExitClick}>
-                Вийти з магазину
-            </button> */}
+    
         </div>
     );
 };
