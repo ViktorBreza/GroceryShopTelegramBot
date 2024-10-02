@@ -1,30 +1,34 @@
 .header {
     width: 100%;
-    height: 80px; /* Трохи більше місця для тексту */
+    padding: 15px;
+    background-color: #34495e; /* Темний фон хедера */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-    background-color: #2C3E50; /* Темно-синій фон для сучасного вигляду */
-    border-bottom: 2px solid #2980B9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь для відділення хедера */
-}
-
-.welcome-container {
-    flex: 1; /* Текст займає всю доступну ширину */
-    overflow: hidden; /* Приховує вихід тексту за межі контейнера */
-    white-space: nowrap;
-    text-overflow: ellipsis; /* Текст буде скорочуватися з "..." */
+    width: 100%;
 }
 
 .welcome-text {
-    font-size: 16px; /* Зменшений розмір шрифту для більшої адаптивності */
-    color: #ECF0F1; /* Світлий текст для темного фону */
+    font-size: 1.2em;
+    color: #ecf0f1; /* Світлий текст */
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .logout-button {
-    background-color: #E74C3C; /* Червоний колір кнопки для контрасту */
-    color: #fff;
+    background-color: #e74c3c;
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -34,18 +38,5 @@
 }
 
 .logout-button:hover {
-    background-color: #C0392B; /* Темніший відтінок червоного при наведенні */
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Вертикальний хедер на малих екранах */
-        height: auto;
-        padding: 10px 20px;
-    }
-
-    .logout-button {
-        margin-top: 10px;
-        width: 100%;
-    }
+    background-color: #c0392b;
 }
