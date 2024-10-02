@@ -15,14 +15,20 @@ h2 {
 }
 
 .category-button {
-    padding: 15px 30px;
-    font-size: 35px;  /* Збільшено розмір тексту для зручності */
-    border: 3px solid #ddd;
-    border-radius: 10px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
+    padding: 15px;
+    font-size: 30px; /* Зробіть текст більшим */
+    margin: 15px 0; /* Відстань між кнопками */
+    width: 100%; /* Зробіть кнопку на всю ширину */
 }
+
+.logout-button {
+    position: absolute; /* Розмістіть кнопку в правому верхньому куті */
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    font-size: 30px;
+}
+
 
 .category-button:hover {
     background-color: #45a049;
