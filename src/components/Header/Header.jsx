@@ -3,20 +3,17 @@ import { useTelegram } from '../../hooks/useTelegram';
 import Button from '../Button/Button';
 import './Header.css';
 
-
 const Header = () => {
     const {user, onClose} = useTelegram();
   
     return (
-        <div classnName={'header'}>
-            <Button onClick={onClose}>Закрити</Button>
-            <span className={'username'}>
-                {user?.username}
+        <div className={'header'}>
+            <span className={'welcome-text'}>
+                Привіт, {user?.username}! Ласкаво просимо до магазину Авокадо, приємних покупок!
             </span>
+            <Button className="logout-button" onClick={onClose}>Вийти з магазину</Button>
         </div>
-           
     );
 };
 
 export default Header;
- 

@@ -1,9 +1,32 @@
 .header {
     width: 100%;
-    height: 50px;
+    height: 70px; /* Зробимо хедер трохи вищим */
     display: flex;
     align-items: center;
-    padding: 0 20px;  
+    justify-content: space-between; /* Додамо вирівнювання між текстом і кнопкою */
+    padding: 0 20px;
+    background-color: #f0f8ff; /* Ніжний фон для хедера */
+    border-bottom: 1px solid #ddd;
+}
+
+.welcome-text {
+    font-size: 18px;
+    color: #333;
+}
+
+.logout-button {
+    background-color: #ffcc80; /* Ніжно-оранжевий колір кнопки */
+    color: #fff;
+    padding: 10px 20px; /* Збільшуємо розмір кнопки */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #ffa726; /* Трохи яскравіший колір при наведенні */
 }
 
 .username {
