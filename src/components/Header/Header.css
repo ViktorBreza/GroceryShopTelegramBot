@@ -4,7 +4,7 @@
     background-color: #34495e; /* Темний фон хедера */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center; /* Центруємо контент */
+    justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 1;

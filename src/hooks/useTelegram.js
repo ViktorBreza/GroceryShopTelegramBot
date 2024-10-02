@@ -1,3 +1,5 @@
+// src/hooks/useTelegram.js
+
 const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
@@ -7,7 +9,7 @@ export function useTelegram() {
     }
 
     const onToggleButton = () => {
-        if(tg.MainButton.isVisible) {
+        if (tg.MainButton.isVisible) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
