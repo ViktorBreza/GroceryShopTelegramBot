@@ -1,29 +1,32 @@
 /* src/components/Header/Header.css */
 .header {
-    background-color: #ffcccb; /* Soft salmon background color */
+    background-color: #e79864; /* Soft salmon background color */
     padding: 10px; /* Some padding */
     display: flex; /* Flexbox for layout */
     justify-content: space-between; /* Space out items */
     align-items: center; /* Center items vertically */
-    border-bottom: 1px solid #dee2e6; /* Optional bottom border */
+    border-bottom: 1px solid #acccec; /* Optional bottom border */
     position: relative; /* Allows positioning of absolute elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
+    min-height: 60px; /* Set a minimum height to avoid resizing */
 }
 
 .welcome-text {
     font-size: 18px; /* Increased font size for better visibility */
-    color: #4a4a4a; /* Darker text color for contrast */
-    margin-right: auto; /* Push text to the left */
+    color: #0c3d07; /* Darker text color for contrast */
+    margin-right: 60px; /* Add margin to the right to avoid overlapping with the logout button */
+    font-family: 'Arial', sans-serif; /* Change to a more pleasant font */
 }
 
-/* Add this to ensure logout button does not overlap with header text */
+/* Ensure logout button does not overlap with header text */
 .logout-button {
-    position: absolute; /* Use absolute positioning */
-    top: 10px; /* Adjust top position to align with header */
-    right: 10px; /* Keep it on the right */
     padding: 10px 15px; /* Padding for the logout button */
     background-color: #d9534f; /* Red background for the button */
     color: white; /* White text */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Adjust top position to align with header */
+    right: 10px; /* Keep it on the right */
 }
