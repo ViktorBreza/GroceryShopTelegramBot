@@ -20,3 +20,14 @@
     top: 10px; /* Adjust top position */
     right: 10px; /* Adjust right position */
 }
+
+h2 {
+    font-size: 28px; /* Збільшений розмір шрифту */
+    font-family: 'Arial', sans-serif; /* Гарний шрифт */
+    font-weight: bold; /* Товстий шрифт для кращого акценту */
+    color: #333; /* Приємний темно-сірий колір */
+    text-align: left; /* Вирівнювання по лівій стороні */
+    margin-bottom: 20px; /* Відступ знизу для простору */
+    padding-left: 15px; /* Відступ зліва для кращого вигляду */
+}
+
