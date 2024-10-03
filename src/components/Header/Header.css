@@ -1,10 +1,10 @@
 .header {
-    background-color: #e79864; /* Soft salmon background color */
+    background-color: #acccec; /* Soft salmon background color */
     padding: 15px; /* Increased padding for more space */
     display: flex; /* Flexbox for layout */
     /*justify-content: space-between; /* Space out items */
     align-items: center; /* Center items vertically */
-    border-bottom: 1px solid #acccec; /* Optional bottom border */
+   /* border-bottom: 1px solid #acccec; /* Optional bottom border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Increased shadow for better separation */
     min-height: 40px; /* Increased minimum height for more space */
 }
