@@ -3,7 +3,7 @@
 .product {
     border: 1px solid #ccc; /* Оформлення межі */
     border-radius: 8px; /* Заокруглені краї */
-    padding: 16px; /* Внутрішні відступи */
+    padding: 10px; /* Внутрішні відступи */
     text-align: center; /* Вирівнювання тексту по центру */
     background-color: #d1e7d1; /* Ніжно салатовий фон */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для глибини */
@@ -11,7 +11,7 @@
 }
 
 .product:hover {
-    transform: scale(1.20); /* Збільшення контейнера при наведенні */
+    transform: scale(1.50); /* Збільшення контейнера при наведенні */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Зміна тіні при наведенні */
 }
 
@@ -29,7 +29,7 @@
 
 .title {
     font-size: 1.2em; /* Розмір шрифту для заголовка */
-    margin: 3px 0; /* Відступи */
+    margin: 1px 0; /* Відступи */
 }
 
 .description {
@@ -39,9 +39,9 @@
 
 .price {
     font-weight: bold; /* Жирний текст для ціни */
-    margin: 3px 0; /* Відступи */
+    margin: 1px 0; /* Відступи */
 }
 
 .add-btn {
-    margin-top: 5px; /* Відступ зверху для кнопки */
+    margin-top: 2px; /* Відступ зверху для кнопки */
 }
