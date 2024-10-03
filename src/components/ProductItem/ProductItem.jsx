@@ -33,13 +33,16 @@ const ProductItem = ({ product, className, onAdd }) => {
                 </Button>
             ) : (
                 <div className={'quantity-selector'}>
-                    <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
-                    <span>{quantity}</span>
-                    <button onClick={() => setQuantity(quantity + 1)}>+</button>
+                    <div className={'quantity-controls'}>
+                        <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
+                        <span>{quantity}</span>
+                        <button onClick={() => setQuantity(quantity + 1)}>+</button>
+                    </div>
                     <Button className={'confirm-btn'} onClick={onAddHandler}>
                         Підтвердити
                     </Button>
                 </div>
+
             )}
         </div>
     );

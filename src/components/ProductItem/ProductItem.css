@@ -3,68 +3,101 @@
 .product {
     border: 1px solid #ccc; /* Оформлення межі */
     border-radius: 8px; /* Заокруглені краї */
-    padding: 10px; /* Внутрішні відступи */
+    padding: 15px; /* Більші внутрішні відступи для гармонійного вигляду */
     text-align: center; /* Вирівнювання тексту по центру */
-    background-color: #d1e7d1; /* Ніжно салатовий фон */
+    background-color: #f0fdf0; /* Трохи світліший ніжно-салатовий фон */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для глибини */
-    transition: transform 0.2s, box-shadow 0.2s; /* Плавний перехід для анімації */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Плавний перехід для анімації */
 }
 
 .product:hover {
-    transform: scale(1.35); /* Збільшення контейнера при наведенні */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Зміна тіні при наведенні */
+    transform: scale(1.05); /* Легке збільшення при наведенні */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Збільшена тінь при наведенні */
 }
 
 .img {
     width: 100%; /* Ширина контейнера для зображення */
-    height: 75px; /* Фіксована висота вдвічі менша */
+    height: 100px; /* Фіксована висота для зображення */
     border-radius: 5px; /* Заокруглені краї для контейнера */
+    margin-bottom: 10px; /* Відступ знизу для відділення від тексту */
 }
 
 .img img {
-    width: 100%; /* Ширина зображення заповнює контейнер */
-    height: 100%; /* Висота зображення заповнює контейнер */
-    object-fit: contain; /* Зберігайте пропорції зображення */
+    width: 100%; /* Зображення займає всю ширину контейнера */
+    height: 100%; /* Зображення займає всю висоту контейнера */
+    object-fit: contain; /* Зберігає пропорції зображення */
 }
 
 .title {
-    font-size: 1.2em; /* Розмір шрифту для заголовка */
-    margin: 1px 0; /* Відступи */
+    font-size: 1.4em; /* Трохи збільшений розмір шрифту для заголовка */
+    margin: 10px 0; /* Відступи зверху і знизу для заголовка */
 }
 
 .description {
-    font-size: 0.9em; /* Розмір шрифту для опису */
-    color: #666; /* Колір тексту для опису */
+    font-size: 1em; /* Збільшений розмір шрифту для опису */
+    color: #555; /* Трохи темніший сірий для тексту */
+    margin-bottom: 10px; /* Відступ знизу для простору */
 }
 
 .price {
     font-weight: bold; /* Жирний текст для ціни */
-    margin: 1px 0; /* Відступи */
+    margin: 10px 0; /* Відступи зверху і знизу */
+    color: #333; /* Темний колір для виділення ціни */
 }
 
 .add-btn {
-    margin-top: 2px; /* Відступ зверху для кнопки */
-}
-
-.quantity-selector {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.quantity-selector button {
+    margin-top: 15px; /* Відступ зверху для кнопки додавання в кошик */
+    padding: 10px 20px; /* Більші внутрішні відступи для кнопки */
     background-color: #4CAF50; /* Зелений фон */
     color: white; /* Білий текст */
     border: none; /* Без рамки */
-    padding: 10px; /* Внутрішні відступи */
+    cursor: pointer; /* Курсор у вигляді руки */
+    border-radius: 5px; /* Заокруглені краї кнопки */
+    transition: background-color 0.2s ease-in-out; /* Плавний перехід кольору */
+}
+
+.add-btn:hover {
+    background-color: #45a049; /* Трохи темніший зелений при наведенні */
+}
+
+.quantity-selector {
+    display: flex; /* Вирівнювання елементів у ряд */
+    justify-content: center; /* Центрування елементів у рядку */
+    align-items: center; /* Вирівнювання по вертикалі */
+    margin-top: 15px; /* Відступ зверху */
+}
+
+.quantity-selector button {
+    background-color: #4CAF50; /* Зелений фон для кнопок кількості */
+    color: white; /* Білий текст */
+    border: none; /* Без рамки */
+    padding: 8px 15px; /* Внутрішні відступи для кнопок */
     cursor: pointer; /* Курсор у вигляді руки при наведенні */
+    border-radius: 5px; /* Заокруглені краї кнопок */
+    font-size: 18px; /* Більший розмір шрифту */
+    transition: background-color 0.2s ease-in-out; /* Плавний перехід кольору */
+}
+
+.quantity-selector button:hover {
+    background-color: #45a049; /* Темніший зелений при наведенні */
 }
 
 .quantity-selector span {
-    margin: 0 10px; /* Відстань між кнопками */
-    font-size: 18px; /* Розмір шрифту */
+    margin: 0 15px; /* Відстань між кнопками */
+    font-size: 20px; /* Трохи більший розмір шрифту для кількості */
 }
 
 .confirm-btn {
-    margin-left: 10px; /* Відстань між кнопками */
+    margin-left: 20px; /* Відстань між кнопками кількості та кнопкою підтвердження */
+    padding: 10px 20px; /* Внутрішні відступи для кнопки підтвердження */
+    background-color: #007bff; /* Синій фон для кнопки підтвердження */
+    color: white; /* Білий текст */
+    border: none; /* Без рамки */
+    cursor: pointer; /* Курсор у вигляді руки при наведенні */
+    border-radius: 5px; /* Заокруглені краї кнопки */
+    transition: background-color 0.2s ease-in-out; /* Плавний перехід кольору */
+}
+
+.confirm-btn:hover {
+    background-color: #0069d9; /* Темніший синій при наведенні */
 }
