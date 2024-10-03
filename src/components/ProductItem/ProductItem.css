@@ -48,18 +48,8 @@
 
 .quantity-selector {
     display: flex;
-    flex-direction: column; /* Вирівнює елементи по вертикалі */
-    align-items: center; /* Центрує елементи по горизонталі */
-    margin-top: 10px; /* Додає відступ зверху */
-}
-
-.quantity-controls {
-    display: flex; /* Вирівнює кнопки та кількість в один ряд */
-    align-items: center; /* Центрує елементи по вертикалі */
-}
-
-.quantity-controls button {
-    margin: 0 5px; /* Додає відступ між кнопками */
+    align-items: center;
+    margin-top: 10px;
 }
 
 .quantity-selector button {

@@ -41,16 +41,13 @@ const ProductItem = ({ product, className, onAdd, cartItems }) => {
                     </Button>
                 ) : (
                     <div className={'quantity-selector'}>
-                    <div className={'quantity-controls'}>
                         <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
                         <span>{quantity}</span>
                         <button onClick={() => setQuantity(quantity + 1)}>+</button>
+                        <Button className={'confirm-btn'} onClick={onAddHandler}>
+                            Підтвердити
+                        </Button>
                     </div>
-                    <Button className={'confirm-btn'} onClick={onAddHandler}>
-                        Підтвердити
-                    </Button>
-                </div>
-                
                 )
             ) : (
                 <Button className={'remove-btn'} onClick={onRemoveHandler}>
