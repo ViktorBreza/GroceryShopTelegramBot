@@ -73,7 +73,7 @@ const ProductList = () => {
 
             {selectedCategory === null ? (
                 <>
-                    <h2>Виберіть категорію</h2>
+                    <h2>Виберіть категорію:</h2>
                     <CategorySelector
                         categories={categories}
                         onSelectCategory={handleCategorySelect}

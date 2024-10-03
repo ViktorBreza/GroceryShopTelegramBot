@@ -5,6 +5,9 @@
 }
 
 body {
-  background: var( --tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
+  background-color: #fffacd; /* Ніжно блідно-жовтий колір */
+  margin: 0; /* Забрати зовнішні відступи для body */
+  padding: 0; /* Забрати внутрішні відступи для body */
+  min-height: 100vh; /* Забезпечити, що сторінка займає всю висоту екрана */
+  box-sizing: border-box; /* Враховує відступи всередині елементів */
 }

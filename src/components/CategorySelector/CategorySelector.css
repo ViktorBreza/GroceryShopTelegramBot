@@ -7,7 +7,7 @@
 }
 
 h2 {
-    margin-bottom: 15px; /* Відступ між заголовком і кнопками */
+    margin-bottom: 5px; /* Відступ між заголовком і кнопками */
 }
 
 .categories-container {
@@ -23,7 +23,7 @@ h2 {
     color: white; /* Колір тексту */
     border: none; /* Без межі */
     border-radius: 5px; /* Закруглені краї */
-    font-size: 16px; /* Розмір шрифту */
+    font-size: 25px; /* Розмір шрифту */
     cursor: pointer; /* Курсор на кнопках */
 }
 
