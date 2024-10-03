@@ -16,7 +16,7 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const { tg, queryId } = useTelegram();
     const [selectedCategory, setSelectedCategory] = useState(null);
-    
+
     const categories = Object.keys(productsData); // Get categories
 
     const onSendData = useCallback(() => {
@@ -81,7 +81,7 @@ const ProductList = () => {
                 </>
             ) : (
                 <div>
-                    <h2>{selectedCategory}</h2>
+                    <h2>Категорія: {selectedCategory}</h2>
                     <div className={'list'}>
                         {productsData[selectedCategory].map(item => (
                             <ProductItem
@@ -92,10 +92,10 @@ const ProductList = () => {
                             />
                         ))}
                     </div>
-                    <button onClick={() => setSelectedCategory(null)}>Назад до категорій</button>
+                    <button className="back-button" onClick={() => setSelectedCategory(null)}>Назад до вибору категорій</button>
                 </div>
             )}
-    
+
         </div>
     );
 };
