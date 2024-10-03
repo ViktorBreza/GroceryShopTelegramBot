@@ -11,7 +11,7 @@
 }
 
 .product:hover {
-    transform: scale(1.50); /* Збільшення контейнера при наведенні */
+    transform: scale(1.35); /* Збільшення контейнера при наведенні */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Зміна тіні при наведенні */
 }
 
@@ -45,3 +45,27 @@
 .add-btn {
     margin-top: 2px; /* Відступ зверху для кнопки */
 }
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-selector button {
+    background-color: #4CAF50; /* Зелений фон */
+    color: white; /* Білий текст */
+    border: none; /* Без рамки */
+    padding: 10px; /* Внутрішні відступи */
+    cursor: pointer; /* Курсор у вигляді руки при наведенні */
+}
+
+.quantity-selector span {
+    margin: 0 10px; /* Відстань між кнопками */
+    font-size: 18px; /* Розмір шрифту */
+}
+
+.confirm-btn {
+    margin-left: 10px; /* Відстань між кнопками */
+}
+
