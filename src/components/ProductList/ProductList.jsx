@@ -92,7 +92,7 @@ const ProductList = () => {
                             />
                         ))}
                     </div>
-                    <button className="back-button" onClick={() => setSelectedCategory(null)}>Назад до вибору категорій</button>
+                    <button className="back-button" onClick={() => setSelectedCategory(null)}>Назад до вибору категорії</button>
                 </div>
             )}
 
