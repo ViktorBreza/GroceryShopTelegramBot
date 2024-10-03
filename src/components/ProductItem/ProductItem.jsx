@@ -4,17 +4,24 @@ import React, { useState } from "react";
 import Button from "../Button/Button";
 import './ProductItem.css';
 
-const ProductItem = ({ product, className, onAdd }) => {
+const ProductItem = ({ product, className, onAdd, cartItems }) => {
     const [quantity, setQuantity] = useState(1); // Стан для кількості товару
     const [showQuantitySelector, setShowQuantitySelector] = useState(false); // Стан для відображення вибору кількості
 
+    // Перевіряємо, чи товар вже в кошику
+    const isInCart = cartItems.some(item => item.id === product.id);
+
     const onAddHandler = () => {
-        // Якщо кількість обрана, додаємо в кошик
+        // Додаємо товар в кошик, якщо кількість більша за 0
         if (quantity > 0) {
             onAdd({ ...product, quantity }); // Додаємо товар з кількістю
-            setQuantity(1); // Скидаємо кількість до 1
-            setShowQuantitySelector(false); // Сховуємо вибір кількості
+            setShowQuantitySelector(false); // Закриваємо вибір кількості
         }
+    };
+
+    const onRemoveHandler = () => {
+        // Видаляємо товар з кошика
+        onAdd({ ...product, quantity: 0 }); // Додаємо товар з кількістю 0 для видалення
     };
 
     return (
@@ -27,19 +34,28 @@ const ProductItem = ({ product, className, onAdd }) => {
             <div className={'price'}>
                 <span>Ціна: <b>{product.price}грн</b></span>
             </div>
-            {!showQuantitySelector ? (
-                <Button className={'add-btn'} onClick={() => setShowQuantitySelector(true)}>
-                    Додати в кошик
-                </Button>
-            ) : (
-                <div className={'quantity-selector'}>
-                    <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
-                    <span>{quantity}</span>
-                    <button onClick={() => setQuantity(quantity + 1)}>+</button>
+            {!isInCart ? (
+                !showQuantitySelector ? (
+                    <Button className={'add-btn'} onClick={() => setShowQuantitySelector(true)}>
+                        Додати в кошик
+                    </Button>
+                ) : (
+                    <div className={'quantity-selector'}>
+                    <div className={'quantity-controls'}>
+                        <button onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
+                        <span>{quantity}</span>
+                        <button onClick={() => setQuantity(quantity + 1)}>+</button>
+                    </div>
                     <Button className={'confirm-btn'} onClick={onAddHandler}>
                         Підтвердити
                     </Button>
                 </div>
+                
+                )
+            ) : (
+                <Button className={'remove-btn'} onClick={onRemoveHandler}>
+                    Видалити з кошика
+                </Button>
             )}
         </div>
     );
